@@ -40,16 +40,19 @@ public class OnlineStoreCartAnalyzer {
             }
         }
         System.out.println("Most purchased product is : "+maxPurchasedProduct+" with quntity "+maxProductCnt);
-        Iterator<Map.Entry<String, Integer>> iterator =
-                productAndQuntityList.entrySet().iterator();
-
-        while (iterator.hasNext()) {
-            Map.Entry<String, Integer> entry = iterator.next();
-
-            if (entry.getValue() == 1) {
-                iterator.remove();
-            }
-        }
+//        Iterator<Map.Entry<String, Integer>> iterator =
+//                productAndQuntityList.entrySet().iterator();
+//
+//        while (iterator.hasNext()) {
+//            Map.Entry<String, Integer> entry = iterator.next();
+//
+//            if (entry.getValue() == 1) {
+//                iterator.remove();
+//            }
+//        }
+        productAndQuntityList.entrySet().removeIf(
+                entry -> entry.getValue() == 1
+        );
         System.out.println("Product and Quntity :"+productAndQuntityList);
 
     }
