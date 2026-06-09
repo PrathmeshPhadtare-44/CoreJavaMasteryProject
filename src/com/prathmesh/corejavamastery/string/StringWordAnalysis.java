@@ -29,43 +29,54 @@ public class StringWordAnalysis {
         }
         System.out.println("Number of space in "+text+" is "+spaceCnt);
 //        First word
-        ArrayList<Character> firstWord = new ArrayList<>();
+        StringBuilder firstWord = new StringBuilder();
         for (char ch : text.toCharArray()){
 
             if(ch != ' '){
-                firstWord.add(ch) ;
+                firstWord.append(ch) ;
             }
             else {break;}
         }
-        System.out.println("First word is "+firstWord.toString());
+        System.out.println("First word is :"+firstWord);
 //        Last word
-        ArrayList<Character> lastWord = new ArrayList<>();
+        StringBuilder lastWord = new StringBuilder();
         for (int i = text.length()-1; i >= 0 ; i--) {
             if (text.charAt(i) != ' '){
-                lastWord.add(text.charAt(i));
+                lastWord.append(text.charAt(i));
             }
             else {
                 break;
             }
         }
-        System.out.println("last word is "+lastWord.toString());
+        System.out.println("last word is :"+lastWord.reverse());
 
 
 //        Index of "Programming"
-        int startingIndex = -1, endingIndex= 0;
-        char[] wordForIndex =new char[ "Programming".length()];
-        int indexOfWord = 0;
-        for (int i = 0; i < text.length(); i++) {
-            if (wordForIndex[indexOfWord] == text.charAt(i)){
-                if (startingIndex == -1){
-                    startingIndex = i;
-                }
-                else {
-                    wordForIndex[indexOfWord] = text.charAt(i);
+        String targetWord = "Programming";
+
+        int foundIndex = -1;
+        for (int i = 0; i <= text.length() - targetWord.length(); i++) {
+            int j;
+            for (j = 0; j < targetWord.length(); j++) {
+
+                if (text.charAt(i + j) != targetWord.charAt(j)) {
+                    break;
                 }
 
             }
+            if (j == targetWord.length()) {
+                foundIndex = i;
+                break;
+            }
         }
+        if (foundIndex != -1) {
+            System.out.println("Index of " + targetWord + " is " + foundIndex);
+        } else {
+            System.out.println(targetWord + " not found");
+        }
+
+
 //        Replace "Language" with "Course"
+        System.out.println(" Replace \"Language\" with \"Course\""+text.replace("Language","Course"));
     }
 }
