@@ -32,6 +32,6 @@ public class StringBasicOperations {
         System.out.println("LowerCase :"+text.toLowerCase());
 
         //Whether it contains "gram"
-        System.out.println("Contains gram :"+text.contains("gram"));
+        System.out.println(text+" Contains \"gram\" :"+(text.contains("gram")?"Yes":"No"));
     }
 }
