@@ -1,6 +1,5 @@
 package com.prathmesh.corejavamastery.string;
 
-import java.util.ArrayList;
 
 /*
 * Average
