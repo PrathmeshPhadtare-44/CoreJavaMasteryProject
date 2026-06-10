@@ -46,7 +46,10 @@ return count;
         }
         return count;
     }
-    public static String getWordCapitalisation(String word){
+    public static String getCapitalizedWord(String word){
+        if(word == null || word.isEmpty()){
+            return word;
+        }//AI correction if statement
     return  String.valueOf(word.charAt(0)).toUpperCase()+word.substring(1).toLowerCase();
 
     }
@@ -55,7 +58,7 @@ return count;
     String text = "aPpLe";
         System.out.println("Count of Lower Case in "+text+" is "+getLowerCaseCount(text)+"" +
                 "\nCount of Upper Case in "+text+" is "+getUpperCaseCount(text));
-        System.out.println("Converting word "+text+" to Capitalisation "+getWordCapitalisation(text));
+        System.out.println("Converting word "+text+" to Capitalisation "+ getCapitalizedWord(text));
 }
 
 }

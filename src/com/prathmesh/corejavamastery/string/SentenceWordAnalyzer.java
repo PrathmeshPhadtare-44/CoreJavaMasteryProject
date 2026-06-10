@@ -21,11 +21,11 @@ avaJ si lufrewop dna avaJ si ralupop*/
 public class SentenceWordAnalyzer {
 
     public static int getTotalWords(String sentence){
-        String[] words = getWordsFormSentence(sentence);
+        String[] words = getWordsFromSentence(sentence);
         return words.length;
     }
     public static String getLongestWord(String sentence){
-        String[] words =getWordsFormSentence(sentence);
+        String[] words = getWordsFromSentence(sentence);
         String longestWord=words[0];
         for (String word :  words){
             if (longestWord.length() < word.length())
@@ -36,7 +36,7 @@ public class SentenceWordAnalyzer {
         return longestWord;
     }
     public static String getShortestWord(String sentence){
-        String[] words = getWordsFormSentence(sentence);
+        String[] words = getWordsFromSentence(sentence);
         String shortestWord=words[0];
         for (String word :  words){
             if (shortestWord.length() > word.length())
@@ -46,22 +46,22 @@ public class SentenceWordAnalyzer {
         }
         return shortestWord;
     }
-    public static String[] getWordsFormSentence(String sentence){
+    public static String[] getWordsFromSentence(String sentence){
         return sentence.trim().split(" ");
     }
     public static String getReversedWordWithSamePosition(String sentence){
-        String[] words = getWordsFormSentence(sentence);
+        String[] words = getWordsFromSentence(sentence);
         String newReversedSentence="";
         for (String word : words){
             newReversedSentence += new StringBuilder(word).reverse().toString() + " ";
         }
 
 
-        return newReversedSentence;
+        return newReversedSentence.trim();
     }
     public static int getCountOfWordInSentence(String sentence, String targetWord){
         int count=0;
-        String[] words = getWordsFormSentence(sentence);
+        String[] words = getWordsFromSentence(sentence);
         for (String word : words)
         {
             if (word.equals(targetWord)){
