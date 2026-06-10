@@ -1,0 +1,84 @@
+4 Questions
+Easy
+Question 1
+String text = "Programming";
+Print:
+Length
+First character
+Last character
+Uppercase version
+Lowercase version
+Whether it contains "gram"
+Expected Output Example
+Length : 11
+First Character : P
+Last Character : g
+Uppercase : PROGRAMMING
+Lowercase : programming
+Contains gram : true
+
+Average
+Question 2
+String text = "Java Programming Language";
+
+Without hardcoding answers:
+
+Find and print:
+
+Total length
+Number of spaces
+First word
+Last word
+Index of "Programming"
+Replace "Language" with "Course"
+Intermediate
+Question 3
+
+Given:
+
+String text = "aPpLe";
+
+Perform all:
+
+Count uppercase letters
+Count lowercase letters
+Convert first character to uppercase
+Convert remaining characters to lowercase
+Print final corrected word
+
+Output:
+
+Uppercase Count : 2
+Lowercase Count : 3
+Corrected Word : Apple
+
+Use:
+
+loop
+charAt()
+Character class methods
+Hard
+Question 4
+
+Given:
+
+String text = "Java is powerful and Java is popular";
+
+Without using collections:
+
+Find:
+
+Total words
+Number of times "Java" appears
+Longest word
+Shortest word
+Reverse every word individually
+
+Expected style:
+
+Total Words : 7
+Java Count : 2
+Longest Word : powerful
+Shortest Word : is
+Reversed Words :
+avaJ si lufrewop dna avaJ si ralupop
