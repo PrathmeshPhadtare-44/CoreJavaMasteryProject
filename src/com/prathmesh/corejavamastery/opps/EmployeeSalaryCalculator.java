@@ -1,4 +1,18 @@
 package com.prathmesh.corejavamastery.opps;
+
+public class EmployeeSalaryCalculator {
+    public static void main(String[] args) {
+        Employee employee = new Employee(
+                "Rahul",
+                45000,
+                4
+        );
+        System.out.println(employee);
+
+
+
+    }
+}
 /*
 * Average
 ## Question 2
@@ -26,5 +40,62 @@ Annual Salary : 540000
 Bonus : 54000
 
 Status : Experienced Employee*/
-public class EmployeeSalaryCalculator {
+class Employee {
+
+    private String name;
+    private double monthlySalary;
+    private int experience;
+
+
+    @Override
+    public String toString() {
+        return """
+        Employee Details
+        ----------------
+        Name            : %s
+        Monthly Salary  : %.2f
+        Annual Salary   : %.2f
+        Bonus           : %.2f
+        Status          : %s
+        """.formatted(
+                name,
+                monthlySalary,
+                calculateAnnualSalary(),
+                calculateBonus(),
+                getStatus()
+        );
+    }
+
+
+    public Employee(String name, double monthlySalary, int experience) {
+        if (monthlySalary < 0){
+            throw  new IllegalArgumentException("Salary cannot be negative");
+        }
+        if (experience < 0){
+            throw new IllegalArgumentException("Experience cannot be negative");
+        }
+        this.name = name;
+        this.monthlySalary = monthlySalary;
+        this.experience = experience;
+    }
+
+
+
+
+    public double calculateAnnualSalary() {
+        return monthlySalary * 12;
+    }
+
+    public double calculateBonus() {
+        if(experience > 3){
+            return calculateAnnualSalary() * 0.10;
+        }
+        return 0;
+    }
+
+    public String getStatus() {
+        return experience > 3
+                ? "Experienced Employee"
+                : "Regular Employee";
+    }
 }
