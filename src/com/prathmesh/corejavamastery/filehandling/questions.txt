@@ -1,0 +1,61 @@
+Question 1 (Average)
+Student Notes Writer
+Input
+
+User enters:
+
+Java
+Spring Boot
+MySQL
+Git
+
+Type exit to stop.
+
+Task
+
+Store all entered lines into a file named:
+
+notes.txt
+
+Each note should be on a new line.
+
+Output File
+Java
+Spring Boot
+MySQL
+Git
+Concepts Covered
+FileWriter
+BufferedWriter
+Writing to file
+Loop
+User input
+Question 2 (Intermediate)
+Word Counter From File
+Input File
+
+article.txt
+
+Java is powerful.
+Java is object oriented.
+Spring Boot uses Java.
+Task
+
+Read the file and calculate:
+
+Total lines
+Total words
+Total characters (excluding spaces)
+Expected Output
+Lines = 3
+Words = 10
+Characters = 47
+
+(Count based on your implementation.)
+
+Concepts Covered
+FileReader
+BufferedReader
+Reading line by line
+String split()
+File processing
