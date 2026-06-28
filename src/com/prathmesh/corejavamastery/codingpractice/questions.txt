@@ -1,0 +1,48 @@
+P1. Write a program to check if a number is palindrome
+Hint: A palindrome reads same forwards and backwards. Example: 12321 is palindrome, 12345 is not. Convert
+to string and check if it equals its reverse. Use StringBuilder.reverse() for strings.
+
+
+P2. Write a program to reverse a string without using built-in reverse()
+Hint: Use a loop to build string backwards. Or use array and swap. Example: "hello" becomes "olleh". Don't use
+StringBuilder.reverse() for this practice.
+
+
+P3. Write a program to find duplicate characters in a string
+Hint: Use HashMap to count occurrences. Loop through string and print characters with count > 1. Example:
+"hello" has 'l' appearing 2 times.
+
+
+P4. Write a program to remove duplicate characters from string
+Hint: Use LinkedHashSet to maintain order and remove duplicates. Or use Map to track characters seen.
+Example: "programming" becomes "progamin".
+
+
+P5. Write a program to check if two strings are anagrams
+Hint: Anagrams have same characters with same frequency. Sort both strings and compare, or count character
+frequencies. Example: "listen" and "silent" are anagrams.
+
+
+P6. Write a program to count vowels and consonants in a string
+Hint: Vowels: a,e,i,o,u. Loop through string and count. Case-insensitive. Example: "hello" has 2 vowels, 3
+consonants.
+
+
+P7. Write a program to find the first non-repeated character in a string
+Hint: Use HashMap to store character counts. Then iterate and find first with count 1. Example: "programming"
+-> 'p'.
+
+
+P8. Write a program to find the second highest number in an array
+Hint: Sort array descending and get second element. Or use two variables to track highest and second highest
+in single pass.
+
+
+P9. Write a program to find missing number in array of 1 to N
+Hint: Array has N-1 numbers from 1 to N. Sum approach: expected sum minus actual sum. Or use XOR trick.
+Example: [1,2,4,5] missing 3.
+
+
+P10. Write a program to rotate array by K positions
+Hint: Example: [1,2,3,4,5] rotated by 2 becomes [4,5,1,2,3]. Use temp array or reverse technique (reverse first
+K, then rest, then all).
